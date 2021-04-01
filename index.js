@@ -2,7 +2,6 @@ const http = require("http");
 
 const BASE_URL = 'http://applicant-test.us-east-1.elasticbeanstalk.com/'
 const SECURITY_SCRIPT_NAME = 'adpagespeed.js'
-const TOKEN_AUTHORIZATION = "Basic cHJveHl1c2VyOmMycEMxVk80N3FaTm96NmxkRg=="
 
 function getToken(htmlResponse){
     
@@ -74,7 +73,6 @@ function getOptionsPostRequest(cookie, contentLengthValue){
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,/;q=0.8',
             'Content-Type': 'application/x-www-form-urlencoded',
             'Content-Length': contentLengthValue,
-            'Proxy-Authorization' : TOKEN_AUTHORIZATION,
             'Upgrade-Insecure-Requests' : 1,
             'Cookie' : cookie,
             'Referer' : 'http://applicant-test.us-east-1.elasticbeanstalk.com/'
